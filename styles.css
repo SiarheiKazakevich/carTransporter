@@ -20,6 +20,24 @@ header {
   font-weight: bold;
 }
 
+.desktop-menu {
+  display: block;
+}
+
+.desktop-menu ul {
+  list-style: none;
+  display: flex;
+  /*gap: 20px;*/
+  padding: 0;
+  margin: 0;
+}
+
+.desktop-menu ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
 .language-selector select {
   padding: 5px;
   border-radius: 5px;
@@ -40,10 +58,7 @@ header {
 
 nav {
   display: none;
-  position: absolute;
-  top: 60px;
-  left: 0;
-  width: 100%;
+  /*width: 100%;*/
   background-color: #444;
   color: white;
 }
@@ -55,7 +70,7 @@ nav ul {
 }
 
 nav ul li {
-  padding: 10px 20px;
+  padding: 5px 13px;
 }
 
 nav ul li a {
@@ -99,11 +114,15 @@ main {
 }
 
 @media (max-width: 768px) {
+  .desktop-menu {
+    display: none;
+  }
+
   .burger-menu {
     display: flex;
   }
 
   nav {
-    display: block;
+    display: none;
   }
 }
