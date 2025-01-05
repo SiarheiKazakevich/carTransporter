@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Car Transporter</title>
+  <title>CarTransporter</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="./assets/favicon33.png" type="icon">
 </head>
@@ -48,151 +48,56 @@
 
   <main>
 
-    <section id="location">
+    <section class="location" id="location">
       <h1>Расположение</h1>
       <div class="filter-container">
-        <label for="cabHeight">Высота кабины тягача:</label>
-        <select id="cabHeight">
-          <option value="high">Высокая</option>
-
-          <label for="trailerType">Тип прицепа:</label>
-          <select id="trailerType">
-            <option value="kassbohrer">Kassbohrer</option>
-            <option value="kassbohrer-type1">Kassbohrer - Тип 1
-              <div class="slider" id="photoSlider">
-                <!-- Vertical slider for photos, где пользователь может добавлять фото в слайдер,оценивать его лайком или дизлайком -->
-              </div>
-            </option>
-            <option value="kassbohrer-type2">Kassbohrer - Тип 2
-              <div class="slider" id="photoSlider">
-                <!-- Vertical slider for photos, где пользователь может добавлять фото в слайдер,оценивать его лайком или дизлайком-->
-              </div>
-            </option>
-            <option value="kassbohrer-type3">Kassbohrer - Тип 3
-              <div class="slider" id="photoSlider">
-                <!-- Vertical slider for photos, где пользователь может добавлять фото в слайдер,оценивать его лайком или дизлайком -->
-              </div>
-            </option>
-            <option value="lohr">Lohr</option>
-            <option value="lohr-type1">Lohr - Тип 1
-              <div class="slider" id="photoSlider">
-                <!-- Vertical slider for photos, где пользователь может добавлять фото в слайдер,оценивать его лайком или дизлайком -->
-              </div>
-            </option>
-            <option value="lohr-type2">Lohr - Тип 2
-              <div class="slider" id="photoSlider">
-                <!-- Vertical slider for photos, где пользователь может добавлять фото в слайдер,оценивать его лайком или дизлайком -->
-              </div>
-            </option>
-            <option value="lohr-type3">Lohr - Тип 3
-              <div class="slider" id="photoSlider">
-                <!-- Vertical slider for photos, где пользователь может добавлять фото в слайдер,оценивать его лайком или дизлайком -->
-              </div>
-            </option>
-            <option value="rimo">Rimo</option>
-            <option value="rimo-type1">Rimo - Тип 1
-              <div class="slider" id="photoSlider">
-                <!-- Vertical slider for photos, где пользователь может добавлять фото в слайдер,оценивать его лайком или дизлайком -->
-              </div>
-            </option>
-            <option value="rimo-type2">Rimo - Тип 2
-              <div class="slider" id="photoSlider">
-                <!-- Vertical slider for photos, где пользователь может добавлять фото в слайдер,оценивать его лайком или дизлайком -->
-              </div>
-            </option>
-            <option value="rimo-type3">Rimo - Тип 3
-              <div class="slider" id="photoSlider">
-                <!-- Vertical slider for photos, где пользователь может добавлять фото в слайдер,оценивать его лайком или дизлайком -->
-              </div>
-            </option>
-            <option value="aduro">Aduro</option>
-            <option value="aduro-type1">Aduro - Тип 1
-              <div class="slider" id="photoSlider">
-                <!-- Vertical slider for photos, где пользователь может добавлять фото в слайдер,оценивать его лайком или дизлайком -->
-              </div>
-            </option>
-            <option value="aduro-type2">Aduro - Тип 2
-              <div class="slider" id="photoSlider">
-                <!-- Vertical slider for photos, где пользователь может добавлять фото в слайдер,оценивать его лайком или дизлайком -->
-              </div>
-            </option>
-            <option value="aduro-type3">Aduro - Тип 3
-              <div class="slider" id="photoSlider">
-                <!-- Vertical slider for photos, где пользователь может добавлять фото в слайдер,оценивать его лайком или дизлайком -->
-              </div>
-            </option>
-          </select>
-          <option value="low">Низкая</option>
-          <label for="trailerType">Тип прицепа:</label>
-          <select id="trailerType">
-            <option value="kassbohrer">Kassbohrer</option>
-            <option value="kassbohrer-type1">Kassbohrer - Тип 1
-              <div class="slider" id="photoSlider">
-                <!-- Vertical slider for photos, где пользователь может добавлять фото в слайдер,оценивать его лайком или дизлайком -->
-              </div>
-            </option>
-            <option value="kassbohrer-type2">Kassbohrer - Тип 2
-              <div class="slider" id="photoSlider">
-                <!-- Vertical slider for photos, где пользователь может добавлять фото в слайдер,оценивать его лайком или дизлайком -->
-              </div>
-            </option>
-            <option value="kassbohrer-type3">Kassbohrer - Тип 3
-              <div class="slider" id="photoSlider">
-                <!-- Vertical slider for photos, где пользователь может добавлять фото в слайдер,оценивать его лайком или дизлайком -->
-              </div>
-            </option>
-            <option value="lohr">Lohr</option>
-            <option value="lohr-type1">Lohr - Тип 1
-              <div class="slider" id="photoSlider">
-                <!-- Vertical slider for photos, где пользователь может добавлять фото в слайдер,оценивать его лайком или дизлайком -->
-              </div>
-            </option>
-            <option value="lohr-type2">Lohr - Тип 2
-              <div class="slider" id="photoSlider">
-                <!-- Vertical slider for photos, где пользователь может добавлять фото в слайдер,оценивать его лайком или дизлайком -->
-              </div>
-            </option>
-            <option value="lohr-type3">Lohr - Тип 3
-              <div class="slider" id="photoSlider">
-                <!-- Vertical slider for photos, где пользователь может добавлять фото в слайдер,оценивать его лайком или дизлайком -->
-              </div>
-            </option>
-            <option value="rimo">Rimo</option>
-            <option value="rimo-type1">Rimo - Тип 1
-              <div class="slider" id="photoSlider">
-                <!-- Vertical slider for photos, где пользователь может добавлять фото в слайдер,оценивать его лайком или дизлайком -->
-              </div>
-            </option>
-            <option value="rimo-type2">Rimo - Тип 2
-              <div class="slider" id="photoSlider">
-                <!-- Vertical slider for photos, где пользователь может добавлять фото в слайдер,оценивать его лайком или дизлайком -->
-              </div>
-            </option>
-            <option value="rimo-type3">Rimo - Тип 3
-              <div class="slider" id="photoSlider">
-                <!-- Vertical slider for photos, где пользователь может добавлять фото в слайдер,оценивать его лайком или дизлайком -->
-              </div>
-            </option>
-            <option value="aduro">Aduro</option>
-            <option value="aduro-type1">Aduro - Тип 1
-              <div class="slider" id="photoSlider">
-                <!-- Vertical slider for photos, где пользователь может добавлять фото в слайдер,оценивать его лайком или дизлайком -->
-              </div>
-            </option>
-            <option value="aduro-type2">Aduro - Тип 2
-              <div class="slider" id="photoSlider">
-                <!-- Vertical slider for photos, где пользователь может добавлять фото в слайдер,оценивать его лайком или дизлайком -->
-              </div>
-            </option>
-            <option value="aduro-type3">Aduro - Тип 3
-              <div class="slider" id="photoSlider">
-                <!-- Vertical slider for photos, где пользователь может добавлять фото в слайдер,оценивать его лайком или дизлайком -->
-              </div>
-            </option>
-          </select>
-        </select>
+        <div class="dropdown" id="cabDropdown">
+          <button>Тип кабины</button>
+          <div class="dropdown-content">
+            <ul>
+              <li data-cab="high">Высокая
+                <ul>
+                  <li data-trailer="type1">Тип прицепа 1
+                    <ul>
+                      <li data-subtype="1.1">Подтип 1.1</li>
+                      <li data-subtype="1.2">Подтип 1.2</li>
+                      <li data-subtype="1.3">Подтип 1.3</li>
+                    </ul>
+                  </li>
+                  <li data-trailer="type2">Тип прицепа 2
+                    <ul>
+                      <li data-subtype="2.1">Подтип 2.1</li>
+                      <li data-subtype="2.2">Подтип 2.2</li>
+                      <li data-subtype="2.3">Подтип 2.3</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li data-cab="low">Низкая
+                <ul>
+                  <li data-trailer="type1">Тип прицепа 1
+                    <ul>
+                      <li data-subtype="1.1">Подтип 1.1</li>
+                      <li data-subtype="1.2">Подтип 1.2</li>
+                      <li data-subtype="1.3">Подтип 1.3</li>
+                    </ul>
+                  </li>
+                  <li data-trailer="type2">Тип прицепа 2
+                    <ul>
+                      <li data-subtype="2.1">Подтип 2.1</li>
+                      <li data-subtype="2.2">Подтип 2.2</li>
+                      <li data-subtype="2.3">Подтип 2.3</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-
+      <div class="slider" id="photoSlider">
+        <!-- Vertical slider for photos -->
+      </div>
     </section>
 
     <section id="points">

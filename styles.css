@@ -86,21 +86,74 @@ main {
   color: #333;
 }
 
+/*----------section location---------------------*/
+.location {
+  background-color: rgba(206, 201, 201, 0.1);
+}
+
 .filter-container {
+  background-color: rgba(206, 201, 201, 0.1);
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  flex-direction: column;
+  gap: 10px;
   margin: 20px 0;
 }
 
-.filter-container label {
-  margin-right: 10px;
+.dropdown {
+  position: relative;
 }
 
-.filter-container select {
-  padding: 5px 10px;
+.dropdown>button {
+  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  background-color: rgba(206, 201, 201, 0.1);
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.dropdown-content ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown-content ul li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown-content ul li ul {
+  margin-top: 5px;
+  padding-left: 20px;
+  display: none;
+}
+
+.dropdown-content ul li:hover {
+  background-color: rgba(251, 247, 247, 0.348);
+}
+
+.dropdown-content ul li.open>ul {
+  display: block;
+}
+
+.dropdown.open .dropdown-content {
+  background-color: rgba(206, 201, 201, 0.1);
+  display: block;
 }
 
 #photoSlider {
@@ -109,9 +162,12 @@ main {
   border: 1px solid #ddd;
   padding: 10px;
   margin-top: 20px;
-  background-color: white;
+  background-color: rgba(206, 201, 201, 0.1);
   border-radius: 5px;
 }
+
+/*----------finish section location---------------------*/
+
 
 @media (max-width: 768px) {
   .desktop-menu {

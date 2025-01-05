@@ -1,22 +1,35 @@
 document.addEventListener('DOMContentLoaded', () => {
   const burgerMenu = document.getElementById('burgerMenu');
   const sideMenu = document.getElementById('sideMenu');
-  const cabHeightSelect = document.getElementById('cabHeight');
-  const trailerTypeSelect = document.getElementById('trailerType');
+  const cabDropdown = document.getElementById('cabDropdown');
   const photoSlider = document.getElementById('photoSlider');
 
+  // Логика для бургер-меню
   burgerMenu.addEventListener('click', () => {
     sideMenu.classList.toggle('active');
   });
 
-  cabHeightSelect.addEventListener('change', filterPhotos);
-  trailerTypeSelect.addEventListener('change', filterPhotos);
+  // Логика для выпадающего списка "Тип кабины"
+  cabDropdown.addEventListener('click', () => {
+    cabDropdown.classList.toggle('open');
+  });
 
-  function filterPhotos() {
-    const cabHeight = cabHeightSelect.value;
-    const trailerType = trailerTypeSelect.value;
+  // Логика для многоуровневого раскрытия вложенных пунктов
+  document.querySelectorAll('.dropdown-content ul li').forEach(item => {
+    item.addEventListener('click', (e) => {
+      e.stopPropagation(); // Останавливаем всплытие события, чтобы не закрывался родительский список
+      const subList = item.querySelector('ul');
+      if (subList) {
+        subList.classList.toggle('open'); // Раскрываем или скрываем вложенный список
+      }
 
-    photoSlider.innerHTML = `<p>Показаны фото для кабины: ${cabHeight}, типа прицепа: ${trailerType}</p>`;
-    // Здесь можно добавить логику для отображения фото на основе выбранных фильтров
-  }
+      // Проверяем выбранные параметры и выводим сообщение
+      const cabType = e.target.closest('li[data-cab]')?.dataset.cab;
+      const trailerType = e.target.closest('li[data-trailer]')?.dataset.trailer;
+      const subType = e.target.dataset.subtype;
+      if (cabType && trailerType && subType) {
+        photoSlider.innerHTML = `<p>Показаны фото для кабины: ${cabType}, типа прицепа: ${trailerType}, подтипа: ${subType}</p>`;
+      }
+    });
+  });
 });
